@@ -4,7 +4,7 @@ services:
       context: ./app
       dockerfile: Dockerfile
     container_name: app
-    hostname: localhost
+    hostname: app
     networks:
       - monitoring-network
     ports:
