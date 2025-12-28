@@ -1,0 +1,25 @@
+services:
+  app:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    container_name: app
+    hostname: localhost
+    networks:
+      - monitoring-network
+    ports:
+      - "2222:22"
+
+  monitor:
+    build:
+      context: ./monitor
+      dockerfile: Dockerfile
+    container_name: monitor
+    networks:
+      - monitoring-network
+    depends_on:
+      - app
+
+networks:
+  monitoring-network:
+    driver: bridge

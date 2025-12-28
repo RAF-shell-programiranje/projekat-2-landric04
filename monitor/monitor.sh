@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 CONF_FILE="monitor.conf"
 LOG_FILE="app.log"
