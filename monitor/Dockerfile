@@ -8,6 +8,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 COPY ssh.conf /root/.ssh/config
+COPY proj_key /root/.ssh/proj_key
 
 WORKDIR /app
 COPY monitor.* .
