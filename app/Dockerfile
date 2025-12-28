@@ -7,6 +7,7 @@ RUN apt-get update && \
         openssh-server \
         default-jre && \
     rm -rf /var/lib/apt/lists/*
+RUN mkdir -p /run/sshd
 
 RUN useradd -m -s /bin/bash user && \
     echo "user:password" | chpasswd

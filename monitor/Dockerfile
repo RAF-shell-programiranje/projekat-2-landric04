@@ -9,8 +9,8 @@ RUN apt-get update && \
 
 COPY ssh.conf /root/.ssh/config
 COPY proj_key /root/.ssh/proj_key
-RUN chmod 700 /root/.ssh
-RUN chmod 600 /root/.ssh/proj_key
+RUN chmod 700 /root/.ssh && \
+    chmod 600 /root/.ssh/config /root/.ssh/proj_key
 
 WORKDIR /app
 COPY monitor.* .
