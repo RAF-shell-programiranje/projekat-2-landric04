@@ -2,7 +2,7 @@
 set -e
 
 CONF_FILE="monitor.conf"
-LOG_FILE="app.log"
+LOG_FILE="/app/app.log"
 LAST_LOG_LINE=0
 
 parse_config() {
